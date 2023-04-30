@@ -38,7 +38,7 @@ body{
     display: flex;
     flex: 1;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
     width: 80%;
 }
@@ -46,10 +46,10 @@ body{
 .key{
     flex: 1;
     text-align: center;
-    padding: 30px 0px;
+    padding: 45px 0px;
     min-width: 80px; 
 
-    background-color: #ffffff0e;
+    background-color: rgb(101, 172, 82);
     border: 4px solid #a6ff8b;
     border-radius: 10px;
 
@@ -57,20 +57,26 @@ body{
     user-select: none;
 }
 
+.key:hover {
+    /* box-shadow: 0px 0px 10px rgb(95, 255, 32); */
+    background-color: rgb(120, 199, 99);
+}
+
 @media screen and (max-width: 1400px) {
     .key {
-        flex-basis: 18%;
+        flex-basis: 17%;
+        padding: 30px 0px;
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     .key {
         flex-basis: 29%;
     }
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .key {
         flex-basis: 45%;
     }
@@ -82,15 +88,10 @@ body{
     }
 }
 
-.key:hover {
-    box-shadow: 0px 0px 10px rgb(95, 255, 32);
-}
-
-
 .letter{
     font-size: 30px;
     font-weight: 800;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     color: rgb(244, 255, 234);
 }
 
@@ -104,13 +105,28 @@ body{
     transition:all 0.1s;
     transform: scale(1.1);
     border-color: #87ff54;
-    box-shadow: 0px 0px 10px rgb(95, 255, 32);
+    /* background-color: rgb(120, 199, 99); */
+    box-shadow: 0px 0px 10px rgb(106, 255, 100);
+}
+
+a, a::after, a::before {
+    color: #b6ff8b;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .empty{
     flex: 1;
+    color: white;
+    display: flex;
+    align-items: flex-end;
 }
 
 .empty-child{
     margin: 60px;
+}
+
+.tapped{
+    transition: all 0.1s;
+    transform: scale(0.9);
 }

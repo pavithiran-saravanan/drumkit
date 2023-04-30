@@ -21,16 +21,29 @@ function reverseAnimateKey(e){
 function clickHandler(e){
     if(!this.contains(e.target)) return;
     const sound = document.querySelector(`audio[data-key = ${this.getAttribute('data-key')}]`);
+    this.classList.add('tapped');
     if(sound){
         sound.currentTime = 0;
         sound.play();
     }
 }
 
+function bounceBack(e){
+    this.classList.remove('tapped');
+}
+
+function bounceBackAll(e){
+    keys.forEach((key)=>{
+        if(key.classList.contains('tapped')) key.classList.remove('tapped');
+    });
+}
+
 keys.forEach((key) => {
-    key.addEventListener('click', clickHandler);
+    key.addEventListener('mousedown', clickHandler);
+    key.addEventListener('mouseup', bounceBack);
 })
 
 // Add event listener to catch keydown
 window.addEventListener('keydown', animateKey);
 window.addEventListener('keyup', reverseAnimateKey);
+window.addEventListener('mouseup', bounceBackAll);
