@@ -18,6 +18,19 @@ function reverseAnimateKey(e){
     }
 }
 
+function clickHandler(e){
+    if(!this.contains(e.target)) return;
+    const sound = document.querySelector(`audio[data-key = ${this.getAttribute('data-key')}]`);
+    if(sound){
+        sound.currentTime = 0;
+        sound.play();
+    }
+}
+
+keys.forEach((key) => {
+    key.addEventListener('click', clickHandler);
+})
+
 // Add event listener to catch keydown
 window.addEventListener('keydown', animateKey);
 window.addEventListener('keyup', reverseAnimateKey);
