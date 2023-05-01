@@ -107,6 +107,14 @@ a, a::after, a::before {
     background-color: rgb(120, 199, 99);
 }
 
+.info{
+    padding-top: 80px;
+    color: #b6ff8b;
+    font-size: 20px;
+    font-weight: 500;
+    user-select: none;
+}
+
 @media screen and (max-width: 1400px) {
     .key {
         flex-basis: 17%;
