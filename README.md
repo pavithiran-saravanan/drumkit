@@ -4,7 +4,7 @@ A simple fun web application that allows users to play drums by pressing specifi
 # Demo
 Check out the live demo of the project here https://pavithiran-saravanan.github.io/drumkit/
 
-# Skills
+# Built With
 - HTML
 - CSS
 - Javascript
