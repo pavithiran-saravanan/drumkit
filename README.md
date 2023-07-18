@@ -15,5 +15,6 @@ Check out the live demo of the project here https://pavithiran-saravanan.github.
 - Mobile responsive
 
 ## Screenshots
-![Image1](https://github.com/pavithiran-saravanan/drumkit/assets/63770646/4270abf1-6a99-4100-b94c-7c3f1293fd51)
+![drumkit-screenshot](https://github.com/pavithiran-saravanan/drumkit/assets/63770646/39fad13a-9384-4446-93b9-497515ff4a07)
+
 
